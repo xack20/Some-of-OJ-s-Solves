@@ -145,9 +145,7 @@ int main()
     FileIO;
 #endif
 
-string s; getline(cin,s);
-cout << s << endl;
-    
+
 
 #ifndef ONLINE_JUDGE
     execution_time;
