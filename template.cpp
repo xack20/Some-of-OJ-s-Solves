@@ -145,7 +145,7 @@ int main()
     FileIO;
 #endif
 
-string s; cin >> s;
+string s; getline(cin,s);
 cout << s << endl;
     
 
