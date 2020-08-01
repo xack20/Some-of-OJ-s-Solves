@@ -145,6 +145,8 @@ int main()
     FileIO;
 #endif
 
+string s; cin >> s;
+cout << s << endl;
     
 
 #ifndef ONLINE_JUDGE
