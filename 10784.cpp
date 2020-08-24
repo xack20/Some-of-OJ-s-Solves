@@ -146,6 +146,15 @@ int main()
 #endif
 
 
+    ll n,t=1;
+    while(cin >> n)
+    {
+        /// Bhaskaracharya's Formula
+        /// series sum
+        cout << "Case " << t++ << ": " << int((sqrt(8 * n + 1) - 1) / 2.0) - 3 << endl;
+    }
+
+
 
 
 #ifndef ONLINE_JUDGE
