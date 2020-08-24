@@ -1,2 +1,5 @@
+Case 1: 7
+Case 2: 16
+Case 3: 47
 
->>Time taken: 0.0000000000s
+>>Time taken: 0.0010000000s
