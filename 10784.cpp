@@ -140,11 +140,6 @@ bool is_prime(ll n)
 int main()
 {
 
-#ifndef ONLINE_JUDGE
-    start_time;
-    FileIO;
-#endif
-
 
     ll n,t=1;
     while(cin >> n)
@@ -154,13 +149,6 @@ int main()
         /// series sum
         cout << "Case " << t++ << ": " << int((sqrt(8 * n + 1) - 1) / 2.0) + 3 << endl;
     }
-
-
-
-
-#ifndef ONLINE_JUDGE
-    execution_time;
-#endif
 
     return 0;
 }
