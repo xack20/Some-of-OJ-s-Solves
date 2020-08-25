@@ -145,6 +145,34 @@ int main()
     FileIO;
 #endif
 
+ll p,q,r,s; 
+
+while(cin >> p)
+{
+    cin >> q >> r >> s;
+    long double rs=1.0,a,b;
+    
+    a = min(p-q,q);
+    b = min(r-s,r);
+
+    while(1){
+        
+        if(a){
+            rs*=(p- (a-1));
+            rs/=a;
+            a--;
+        }
+        if(b){
+            rs*=b;
+            rs/=(r-(b-1));
+            b--;
+        }
+        if(!a && !b)break;
+    }
+
+    cout.precision(5);
+    cout << fixed  << rs << endl;
+}
 
 
 #ifndef ONLINE_JUDGE
