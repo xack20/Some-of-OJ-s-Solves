@@ -159,20 +159,20 @@ int mark[20];
 int n;
 
 void callBT(int p,int sm,string s){
-    
+
     if( p == n){
-        cout << s << endl;
+        if(isPrime(sm+1)) {
+            cout << s << endl;
+        }
         return;
     }
-    
+
     for(int i = 2 ; i<= n ; i ++){
         if( ! mark[i] && isPrime(sm+i)){
             mark[i]=1;
 
-            string temp;
-            temp.pb('0'+i);
-            cout << temp << endl;
-            callBT(p+1,sm+i,s+temp);
+            string temp= to_string(i);
+            callBT(p+1,i,s+" "+temp);
 
             mark[i]=0;
         }
@@ -192,12 +192,13 @@ int main()
     FileIO;
 #endif
 
-
-while (cin >> n){
-    CLR(mark,0);
-    callBT(1,1,"1");
-    cout << endl;
-}
+    int t = 1;
+    while (cin >> n){
+        if (t > 1)cout << "\n";
+        printf("Case %d:\n",t++);
+        CLR(mark,0);
+        callBT(1,1,"1");
+    }
 
 
 
