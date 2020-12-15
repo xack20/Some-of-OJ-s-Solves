@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long s,i,n,A[10000],j;
+    A[0]=1;
+    A[1]=1;
+    for(i=2;i<10000;i++)
+    {
+        s=A[i-1]+A[i-2];
+        A[i]=s;
+    }
+    cin >> n;
+    for(i=1;i<=n;i++){
+        for(j=0;j<=1000;j++)
+        {
+            if(A[j]>i){
+                cout << "o" ;
+                break;
+            }
+            if(A[j]==i)
+            {
+                cout << "O" ;
+                break;
+            }
+        }
+    }
+    cout << endl;
+    //main();
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,j,c=0,k=0;
+
+    cin >> n;
+    char A[n][10];
+
+    for(i=0;i<n;i++)cin >> A[i];
+   // for(i=0;i<n;i++)cout <<A[i];
+
+    for(j=0;j<7;j++){
+        for(i=0;i<n;i++){
+            if(A[i][j]=='1')c++;
+           //cout <<  A[i][j];
+        }
+        //cout << endl;
+        if(c>k)k=c;
+        c=0;
+    }
+    cout << k << endl;
+
+    return 0;
+
+}

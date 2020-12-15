@@ -1,0 +1,25 @@
+n,m = map(int,input().split())
+ls = list(map(int,input().split()))
+sls = list(sorted(ls,reverse=True))
+ans =0
+lss=[]
+rls = []
+for i in range(m):
+    ans+=sls[i]
+    lss.append(sls[i])
+c=0
+if(m==1):
+    print(ans)
+    print(n)
+    exit()
+for i in range(n):
+    c+=1
+    if(ls[i] in lss):
+        rls.append(c)
+        del lss[lss.index(ls[i])]
+        if(len(rls)==m-1):
+            rls.append(n-sum(rls))
+            break
+        c=0
+print(ans)
+print(*rls)

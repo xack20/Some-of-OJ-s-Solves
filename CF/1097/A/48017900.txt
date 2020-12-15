@@ -1,0 +1,3 @@
+s = input()
+sa = input()
+print("YES" if (s[0] in sa or s[1] in sa) else "NO")

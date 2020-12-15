@@ -1,0 +1,7 @@
+n,x,y = map(int,input().split())
+ls = sorted(list(map(int,input().split())))
+c=0
+for i in range(n):
+   if ls[i]<=x:c+=1 
+if x>y : print(n)
+else : print((c//2)+(c%2))

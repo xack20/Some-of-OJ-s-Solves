@@ -1,0 +1,15 @@
+n,m = map(int,input().split())
+y=list((map(int,input().split())))
+s= min(y)
+e= max(y)
+n-=1
+while(n):
+    y[0],y[1]=map(int,input().split())
+    a=min(y)
+    b=max(y)
+    if(a>s):s=a
+    if(b<e):e=b
+    n-=1
+if(e-s<0):print(-1)
+elif s<=m<=e : print(0)
+else : print((s-m) if m<s else (m-e))

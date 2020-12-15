@@ -1,0 +1,12 @@
+c=0
+a= ["Danil", "Olya", "Slava", "Ann" , "Nikita"]
+b=input()
+for i in range(len(a)):
+    if a[i] in b:
+        c+=1
+        if b.count(a[i])!=1:
+            c=0
+            break
+
+if(c==1):print("YES")
+else : print("NO")

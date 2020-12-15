@@ -1,0 +1,17 @@
+import math
+n = int(input())
+ls = sorted(list(map(int,input().split())))
+s = sum(ls)
+if(s/n >= 4.5) : print(0)
+else : 
+    ch = math.ceil(4.5 * n)
+    rm = ch - s
+    c=0
+    for i in range(n):
+        if(rm-(5-ls[i])<=0):
+            c+=1
+            break
+        else :
+            c+=1
+            rm-=(5-ls[i])
+    print(c)

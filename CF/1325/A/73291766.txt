@@ -1,0 +1,1 @@
+exec(input()*'print 1,input()-1;')

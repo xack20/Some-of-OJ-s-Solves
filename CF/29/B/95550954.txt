@@ -1,0 +1,22 @@
+dt,pd,sp,g,r = map(int,input().split())
+
+
+
+it = pd/sp
+
+
+
+if(it<g):
+    ntt = dt/sp
+    print("%.8f" %ntt )
+    
+    
+elif it>(g+r):
+    tr = it+(g+r)
+    if(it%(g+r)):print("%.8f"%tr)
+    
+    
+    
+else:
+    nt = r+g+((dt-pd)/sp)
+    print("%.8f" % nt)

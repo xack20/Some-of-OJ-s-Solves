@@ -1,0 +1,8 @@
+n = int(input())
+ls = sorted(map(int,input().split()))
+sm = 0
+i=0
+while((i+1)<n):
+    sm+=(ls[i+1]-ls[i])
+    i+=2
+print(sm)

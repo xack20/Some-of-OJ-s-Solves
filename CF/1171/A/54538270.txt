@@ -1,0 +1,12 @@
+import java.util.*
+
+fun main(){
+
+    val scan = Scanner(System.`in`)
+    var t : Int = scan.nextInt()
+    while(t>=1) {
+        val n: Int = scan.nextInt()
+        println(n / 2)
+        t--
+    }
+}

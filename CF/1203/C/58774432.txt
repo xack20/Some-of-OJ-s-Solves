@@ -1,0 +1,35 @@
+#include <algorithm>
+#include <cstdio>
+
+using namespace std;
+
+long long sigma(long long n) {
+    long long count = 0;
+    for (long long i = 1; i * i <= n; i++) {
+        if (!(n % i)) {
+            count++;
+            long long j = n / i;
+            if (j != i) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    long long gcd;
+    scanf("%lld", &gcd);
+    n--;
+    while (n--) {
+        long long num;
+        scanf("%lld", &num);
+        gcd = __gcd(gcd, num);
+    }
+    printf("%lld", sigma(gcd));
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+n,m = map(int,input().split())
+ls = list(map(int,input().split()))
+s  = set()
+for i in range(n):
+    s.add(ls[i])
+s=list(s)
+if(len(s)>=m):
+    print("YES")
+    for i in range(m):
+        print(ls.index(s[i])+1,end=" ")
+else :print("NO")

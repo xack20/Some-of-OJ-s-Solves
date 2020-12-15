@@ -1,0 +1,6 @@
+t = int(input())
+while t :
+    n = int(input())
+    arr = sorted(list(map(int,input().split())))
+    print(min(min(arr[len(arr)-1],arr[len(arr)-2])-1,len(arr)-2))
+    t-=1

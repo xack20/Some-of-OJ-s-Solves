@@ -1,0 +1,22 @@
+n = int(input())
+ls = sorted(list(map(int,input().split())))
+f=c=sum=0
+for i in range(n):
+    if(ls[i]%2):
+        f=1
+        c+=1
+
+if not f:print(0)
+elif(c%2==0) :
+    f=0
+    for i in range(n):
+        if(ls[i]%2 and not f):
+            f=1
+            continue
+        if(f and ls[i]%2):sum+=ls[i]
+        elif(not ls[i]%2):sum+=ls[i]
+    print(sum)
+else:
+    for i in range(n):
+        sum+=ls[i]
+    print(sum)

@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    int n,i=0,j,c=0,k=0;
+
+    cin >> n ;
+    int A[n];
+    for(i=0;i<n;i++)cin >> A[i];
+    i=0;
+    j=(abs)(A[i]-A[i+1]);
+    //if(j<0)k=j;
+    //else if(j>0)
+    //cout << j << endl;
+    for(i=1;i<n-1;i++){
+
+        if((abs)(A[i]-A[i+1])!=j)break;
+    }
+    //cout << i <<endl;
+
+    if(n==i+1 && A[k]>A[k+1])cout << A[n-1]-j;
+    else if(n==i+1 && A[k]<A[k+1])cout << A[n-1]+j;
+    else cout << A[n-1]<< endl;
+    return 0;
+
+}

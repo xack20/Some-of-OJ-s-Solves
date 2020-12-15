@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        scanf("%d",&n);
+        string s;
+        cin >> s;
+        int l = n-1,f=0;
+        for(int i =0 ; i < int(n/2);i++,l--)
+        {
+            if (abs(s[l]-s[i])>2 || abs(s[l]-s[i])==1){
+                cout << "NO" <<endl;
+                f=1;
+                break;
+            }
+        }
+        if(!f)cout << "YES" << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i;
+    cin >> n;
+    int n2=n*n;
+    int k=1;
+    int l=n2;
+    while(k<=(n2/2))
+    {
+        for(i=1;i<=n/2;i++)cout << k++ << " ";
+        for(i=1;i<=n/2;i++){
+                if(i==n/2)cout << l-- << endl;
+                else cout << l-- << " ";
+        }
+    }
+
+    //main();
+    return 0;
+}

@@ -1,0 +1,14 @@
+n , m = map(int, input().split())
+lst = (list(map(int,input().split())))
+
+for i in range (n):
+    if(lst[i]<=m and lst[i]!=-1):lst[i]=-1
+    else : break
+rlst = list(reversed(lst))
+for i in range(n):
+    if(rlst[i]<=m and rlst[i]!=-1):rlst[i]=-1
+    else : break
+c= 0
+for i in range(n):
+    if(rlst[i]==-1):c+=1
+print(c)

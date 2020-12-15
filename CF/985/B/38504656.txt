@@ -1,0 +1,23 @@
+n,m = map(int,input().split())
+lst = []
+for i in range(n):
+    lst.append(input())
+f=c=0
+lstt = [0]*m
+for i in range(n):
+    for j in range(m):
+        if(lst[i][j]=='1'):
+            lstt[j]+=1
+lsuc = lstt[0:m]
+#print(*lsuc)
+for i in range(n):
+    for j in range(m):
+        if(lst[i][j]=='1'):
+            lstt[j]-=1
+    #print(*lstt)
+    if(0 not in lstt):
+        print("YES")
+        exit()
+    lstt=lsuc[0:m]
+
+else : print("NO")

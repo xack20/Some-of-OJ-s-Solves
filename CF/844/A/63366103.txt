@@ -1,0 +1,13 @@
+s=input()
+n = int(input())
+
+if len(s)<n :
+  print( "impossible" )
+  exit()
+
+
+ans = 0
+if len(set(list(s)))<n:
+  ans = (n-len(set(list(s))))
+
+print(ans)

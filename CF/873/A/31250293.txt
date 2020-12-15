@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n , k , x;
+    cin >> n >> k >> x;
+    int A[n];
+    int i,sum=0;
+    for(i=0;i<n;i++)cin >> A[i];
+    for(i=0;i<n-k;i++)sum+=A[i];
+    sum+=k*x;
+    cout << sum << endl;
+    return 0;
+}

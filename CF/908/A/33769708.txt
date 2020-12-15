@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c = 0,i;
+    char A[100];
+    cin >> A ;
+    for(i=0;A[i];i++)
+    {
+        if(A[i]=='a' || A[i]=='e' || A[i]=='i' || A[i]=='o' || A[i]=='u')c++;
+        else if(A[i]>='0' && A[i] <='9'){
+            int p = 0 + (A[i]-'0');
+            if(p%2!=0)c++;
+        }
+    }
+    cout << c <<endl;
+    //main();
+    return 0;
+}

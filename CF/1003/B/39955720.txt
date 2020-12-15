@@ -1,0 +1,42 @@
+a , b, x = map(int,input().split())
+st = str()
+if(x%2==0):
+    if(a>=b):
+        for i in range(x//2):
+            st+="01"
+        for i in range(b-(x//2)):
+            st+="1"
+        for i in range(a-(x//2)):
+            st+="0"
+        print(st)
+        exit()
+    else:
+        for i in range(x//2):
+            st+="10"
+        for i in range(a-(x//2)):
+            st+="0"
+        for i in range(b-(x//2)):
+            st+="1"
+        
+        print(st)
+        exit()
+else:
+    if(a>=b):
+        for i in range(x//2):
+            st+="01"
+        for i in range(a-(x//2)):
+            st+="0"
+        for i in range(b-(x//2)):
+            st+="1"
+        print(st)
+        exit()
+    else:
+        for i in range(x//2):
+            st+="10"
+        for i in range(b-(x//2)):
+            st+="1"
+        for i in range(a-(x//2)):
+            st+="0"
+        print(st)
+        exit()
+    

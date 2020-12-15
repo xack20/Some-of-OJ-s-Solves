@@ -1,0 +1,144 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t=0,tb,pos,l,r;
+    cin >> tb >> pos >> l >> r;
+
+    if(r-l==tb-1)cout << "0" << endl;
+    else if(l==r)
+    {
+        if(l==pos)
+        {
+            if(r==tb)cout << "1" <<endl;
+            else if(l==1)cout << "1" <<endl;
+            else cout << "2" <<endl;
+        }
+        else if(pos<l)
+        {
+            t+=(l-pos);
+            if(r==tb)cout << ++t <<endl;
+            else if(l==1)cout << ++t <<endl;
+            else
+            {
+                t+=2;
+                cout << t << endl;
+            }
+        }
+        else if(pos>l)
+        {
+            t+=(pos-l);
+            if(r==tb)cout << ++t <<endl;
+            else if(l==1)cout << ++t <<endl;
+            else
+            {
+                t+=2;
+                cout << t << endl;
+            }
+        }
+    }
+    else
+    {
+        if(pos<l)
+        {
+            t+=(l-pos);
+            t++;
+
+            if(r!=tb)
+            {
+                t++;
+                t+=(r-l);
+            }
+            cout << t << endl;
+        }
+        else if(pos>r)
+        {
+            t+=(pos-r);
+            t++;
+
+            if(l!=1)
+            {
+                t++;
+                t+=(r-l);
+            }
+            cout << t << endl;
+        }
+        else if(pos==r)
+        {
+            if(r==tb)
+            {
+                t+=(r-l);
+                t++;
+                cout << t << endl;
+            }
+            else
+            {
+                t++;
+
+                if(l!=1)
+                {
+                    t++;
+                    t+=(r-l);
+                }
+                cout << t << endl;
+            }
+        }
+        else if(pos==l)
+        {
+            if(l==1)
+            {
+                t+=(r-l);
+                t++;
+                cout << t << endl;
+            }
+            else
+            {
+                t++;
+
+                if(tb!=r)
+                {
+                    t++;
+                    t+=(r-l);
+                }
+                cout << t << endl;
+            }
+        }
+        else
+        {
+            if(l==1)
+            {
+                t++;
+                t+=(r-pos);
+                cout << t << endl;
+            }
+            else if(r==tb)
+            {
+                t++;
+                t+=(pos-l);
+                cout << t << endl;
+            }
+            else
+            {
+                if(pos-l < r - pos)
+                {
+                    t+=(pos-l);
+                    t++;
+                    t+=(r-l);
+                    t++;
+                    cout << t << endl;
+                }
+                else
+                {
+                    t+=(r-pos);
+                    t++;
+                    t+=(r-l);
+                    t++;
+                    cout << t << endl;
+                }
+            }
+        }
+    }
+
+    //main();
+    return 0;
+}

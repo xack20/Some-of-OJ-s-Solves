@@ -1,0 +1,12 @@
+t=int(input())
+while t:
+  n,m = map(int,input().split())
+  m-=1
+  while m:
+    ls = list(str(n))
+    n+=(int(max(ls))*int(min(ls)))
+    if((int(max(ls))*int(min(ls)))) == 0: break
+    m-=1
+  print(n)
+  t-=1
+

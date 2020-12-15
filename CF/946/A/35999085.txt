@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fr freopen("input.txt","r",stdin);
+#define fw freopen("output.txt","w",stdout);
+#define sct scanf("%d",&t);
+#define sc3(a,b,c) scanf("%d %d %d",&a,&b,&c);
+#define sc2(a,b) scanf("%d %d",&a,&b);
+#define for(a) for(i=0;i<a;i++)
+#define pf printf
+
+int main()
+{
+    //fr;
+    //fw;
+    int a,i;
+    cin >> a;
+    int A[a];
+    for(a)cin >> A[i];
+
+    sort(A,A+a);
+
+    int s1=0,s2=0;
+
+    for(a)
+    {
+        if(A[i]<0)s2+=A[i];
+        else s1+=A[i];
+    }
+    cout << s1-s2 <<endl;
+
+
+
+
+    //main();
+    return 0;
+}

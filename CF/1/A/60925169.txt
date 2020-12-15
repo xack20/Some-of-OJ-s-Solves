@@ -1,0 +1,9 @@
+#include<stdio.h>
+     
+    int main()
+    {
+    long long int n,m,a; scanf("%I64d %I64d %I64d",&n,&m,&a);
+     
+        printf("%I64d\n", ((long long int)(n/a) + (n%a ? 1 : 0)) * ((long long int)(m/a) + (m%a ? 1 : 0)) );
+    return 0;
+    }

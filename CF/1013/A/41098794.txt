@@ -1,0 +1,2 @@
+n = input()
+print("No" if (sum(list(map(int,input().split())))-sum(list(map(int,input().split())))) <0 else "Yes")

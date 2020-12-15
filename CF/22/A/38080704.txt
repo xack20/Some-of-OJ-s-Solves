@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n ;
+    set<int>s;
+    while(n--)
+    {
+        int a;
+        cin >> a;
+        s.insert(a);
+    }
+    set<int>::iterator it = s.begin();
+    vector <int > v;
+    for(;it!=s.end();it++)v.push_back(*it);
+
+    sort(v.begin(),v.end());
+
+    if(v.size()==1)cout << "NO" <<endl;
+    else cout << v[1] <<endl;
+
+
+    //main();
+     return 0;
+}

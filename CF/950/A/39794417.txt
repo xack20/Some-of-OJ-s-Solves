@@ -1,0 +1,14 @@
+l,r,a= map(int,input().split())
+mn = min(l,r)
+mx = max(l,r)
+if(l== 0  and a == 0 ) or (r==0 and a ==0):print(0)
+elif mx != mn :
+    if(mn+a<=mx):print(2*(mn+a))
+    else:
+        rm = (mn+a)-mx
+        if(rm%2):print(2*mx+rm-1)
+        else:print(2*mx+rm)
+else: 
+    if(l+a+r)%2:print((l+a+r)-1)
+    else:print((l+a+r))
+        

@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int a=n;
+    if (n==0)cout << "O-|-OOOO\n";
+    else{
+    while(a!=0)
+    {
+        char A[100];
+        strcpy(A,"OO|OOOOO");
+        int r= a%10;
+        int b;
+        if(r<5)
+        {
+            A[1]='-';
+            b=0+r;
+            A[3+b]='-';
+        }
+        else
+        {
+            A[0]='-';
+            r=10-r;
+            b=5-r;
+            A[3+b]='-';
+        }
+        a/=10;
+        cout << A;
+    cout << endl;
+    }
+    }
+    return 0;
+}

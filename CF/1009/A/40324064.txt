@@ -1,0 +1,11 @@
+n,m = map(int,input().split())
+pls = list(map(int,input().split()))
+bls = list(map(int,input().split()))
+ans = 0
+j=0
+for i in range(n):
+    if(pls[i] <= bls[j]):
+        ans+=1
+        j+=1
+        if(j==m):break
+print(ans)

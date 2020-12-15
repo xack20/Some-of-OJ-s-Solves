@@ -1,0 +1,27 @@
+nd,np = map(int,input().split())
+ls = list(map(int,input().split()))
+pls = []
+aga=0
+afa=0
+c=0
+for i in range(nd):
+    c=0
+    if(aga and ls[i]>=(np-aga)):
+        c+=1
+        ls[i]-=(np-aga)
+        afa=0
+    if((afa and afa>ls[i])):
+        afa=afa-ls[i]
+        pls.append(0)
+        continue
+    elif(afa):
+        c+=1
+        ls[i]-=afa
+    c+=(ls[i]//np)
+    ls[i]=ls[i]%np
+    pls.append(c)
+    if(ls[i]//np):
+        aga=ls[i]%np
+    else:
+        afa=np-ls[i]
+print(*pls)

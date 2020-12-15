@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,i,j,sum=0;
+    long long A[3][3];
+    for(i=0;i<3;i++)for(j=0;j<3;j++){
+        cin >> A[i][j];
+        sum+=A[i][j];
+    }
+    sum/=2;
+    long long p1,p2,p3;
+    for(i=1;;i++)
+    {
+        if((A[0][1]+A[0][2]+i)==sum && (A[1][0]+A[2][0]+i)==sum){
+            p1=i;
+            break;
+        }
+    }
+    for(i=1;;i++)
+    {
+        if((A[0][1]+A[2][1]+i)==sum && (A[0][2]+A[2][0]+i)==sum && (A[1][0]+A[1][2]+i)==sum){
+            p2=i;
+            break;
+        }
+    }
+    p3=sum-(p1+p2);
+    A[0][0]=p1;
+    A[1][1]=p2;
+    A[2][2]=p3;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<2;j++)cout << A[i][j] <<" ";
+        cout << A[i][j] <<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,8 @@
+n = int(input())
+ls = []
+mx = 0
+for i in range(n):
+    sm = sum(list(map(int,input().split())))
+    if(i==0):mx=sm
+    ls.append(sm)
+print(sorted(ls,reverse=True).index(mx)+1)

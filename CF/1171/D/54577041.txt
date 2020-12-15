@@ -1,0 +1,25 @@
+import java.util.*
+
+fun main(){
+    val scan = Scanner(System.`in`)
+    var a = scan.nextInt()
+    var b = scan.nextInt()
+    var c = scan.nextInt()
+    var d = scan.nextInt()
+    var e = scan.nextInt()
+    var f = scan.nextInt()
+
+    if (d >= a) {
+        d -= a
+        if (d + e >= b) {
+            e += d
+            e -= b
+            if (e + f >= c)
+                println("YES")
+            else
+                println("NO")
+        } else
+            println("NO")
+    } else
+        println("NO")
+}

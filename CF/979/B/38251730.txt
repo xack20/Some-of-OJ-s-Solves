@@ -1,0 +1,85 @@
+
+a= input()
+n=int(a)
+
+
+list1 = {}
+list3 = ['Kuro', 'Shiro' , 'Katie']
+
+for i in range(3):
+    list1[i] = input()
+
+l = len(list1[0])
+
+for i in range(3):
+    list1[i]=sorted(list1[i])
+
+#print(l)
+if(n>l):
+    print("Draw")
+    exit()
+
+#for i in range(3):
+    #list1[i]=sorted(list1[i])
+
+
+mx = 0
+p=0
+list2 = {}
+
+for i in range(3):
+    for j in range(len(list1[i])):
+        if j and sub==str(list1[i][j]) : continue
+        sub = str(list1[i][j])
+        if mx < list1[i].count(sub):
+            mx = list1[i].count(sub)
+
+    list2[p]=int(mx)
+    p = p + 1
+    mx =0
+
+for i in range(3):
+
+
+   if (l == list2[i] and n == 1):
+        list2[i]=l-1
+   elif (l-list2[i]>0):
+        if((l-list2[i])-n >=0): list2[i]=l-((l-list2[i])-n)
+        else : list2[i]=l
+   else :
+      if n==1 : list2[i]=l-1
+      else : list2[i]=l
+
+
+
+#print(list2)
+mxx= 0;
+
+for i in range(3):
+    if list2[i]>mxx:
+        mxx= list2[i]
+
+f =0
+
+#print(list1)
+#print(mxx,list2)
+t = 0
+
+for i in range(3):
+    if(list2[i]==mxx):t=i
+
+
+
+for i in range(3):
+    if(list2[i]==mxx):
+        f+=1
+if(f>1):
+    f=1
+else:
+    f=0
+
+if f:
+    print("Draw")
+else :
+    print(list3[t])
+

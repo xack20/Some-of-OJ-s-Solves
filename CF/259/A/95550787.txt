@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    deque<char>dq;
+
+
+    int i,j,y=8,f=1;
+    char A[10][10];
+    for(i=0; i<8; i++)
+    {
+        for(j=0; j<8; j++)
+        {
+            if(i%2==0)
+            {
+                if(j%2==0)A[i][j]='W';
+                else A[i][j]='B';
+            }
+            else
+            {
+                if(j%2==0)A[i][j]='B';
+                else A[i][j]='W';
+            }
+        }
+    }
+
+    char a;
+    int op=8,opp=8;i=-1;
+    while(opp--)
+    {
+        dq.clear();
+        op=8;
+        while(op--)
+        {
+            cin >> a;
+            dq.push_back(a);
+        }
+        if(f==0)continue;
+        y=8;
+        i++;
+        while(y--)
+        {
+            f= 1;
+            for(j=0;j<8;j++)if(dq.at(j)!=A[i][j]){
+                f=0;
+                break;
+            }
+            if(f)break;
+            else{
+                char b = dq.at(7);
+                dq.pop_back();
+                dq.push_front(b);
+            }
+        }
+        //if(y==0)break;
+        //cout << f << endl;
+
+
+    }
+    if(f==0)cout << "NO" <<endl;
+    else cout << "YES" << endl;
+    return 0;
+}

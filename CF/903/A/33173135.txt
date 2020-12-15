@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a ;
+	cin >> a ;
+	while(a--){
+		int b;
+		cin >> b;
+		int d=b,e=b;
+		if(b%3==0 || b%7==0)cout << "YES" << endl;
+		else {
+			while(d>=7){
+
+                if(d%7==0){
+                        cout << "YES" <<endl;
+                break;
+                }
+                d-=3;
+			}
+			if(d<7)
+            {
+                while(e>=3){
+
+                    if(e%3==0){
+                            cout << "YES"<<endl;
+                    break;
+                    }
+                    e-=7;
+                }
+            }
+            if(e<3)cout << "NO" <<endl;
+		}
+	}
+	return 0;
+}

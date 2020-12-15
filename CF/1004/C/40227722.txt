@@ -1,0 +1,5 @@
+input()
+dc = {}
+for i in map(int,input().split()):
+    dc[i]=len(dc)
+print(sum(dc.values()))

@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long p[700000];
+void a ()
+{
+    for(int i =0 ; i<700000 ; i++ )p[i]=0;
+    p[2]=1;
+    for(int i =3 ; i<=700000; i++)
+    {
+        int mid = ceil(sqrt(i)),f=1;
+        for(int j = 2 ; j<=mid ;j++)
+        {
+            if(i%j==0)
+            {
+                f=0;
+                break;
+            }
+        }
+        if(f)p[i]=1;
+    }
+}
+int main()
+{
+    a();
+    int n,m,k,sum=0;
+    cin >> n >> m;
+    int A[n][m];
+    for(int i = 0 ; i<n ; i++)for(int j = 0; j<m ; j++)cin >> A[i][j];
+    int man;
+    int t1=1;
+    for(int i = 0 ; i<n ; i++)
+    {
+
+        sum=0;
+        for(int j = 0; j<m ; j++)
+        {
+            if(p[A[i][j]])continue;
+            for( k = A[i][j] ;; k++)if(p[k])break;
+            sum+=(k-A[i][j]);
+        }
+        if(t1)man=sum;
+
+        else man = min(man,sum);
+        t1=0;
+    }
+   // cout << man << endl;
+    for(int i = 0 ; i<m ; i++)
+    {
+        sum=0;
+        for(int j = 0; j<n ; j++)
+        {
+            if(p[A[j][i]])continue;
+            for( k = A[j][i] ;; k++)if(p[k])break;
+            sum+=(k-A[j][i]);
+        }
+        if(t1)man=sum;
+
+        else man = min(man,sum);
+        t1=0;
+    }
+
+    cout << man << endl;
+    //main();
+    return 0;
+}

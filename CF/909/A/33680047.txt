@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string A ,B;
+    cin >> A >> B ;
+    int s  = A.size();
+    int i;
+    for(i=0;A[i];i++)
+    {
+        if(i!=0 && A[i]>= B[0]){
+            cout << B[0] <<endl;
+            break;
+        }
+        cout << A[i];
+    }
+    if(i==s)cout << B[0] <<endl;
+    //main();
+    return 0;
+}

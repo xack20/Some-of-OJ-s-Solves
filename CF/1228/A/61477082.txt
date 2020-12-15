@@ -1,0 +1,8 @@
+n,m = map(int,input().split())
+while n <= m:
+  if(len(str(n))== len(set(str(n)))):
+    print(n)
+    exit()
+  n+=1
+
+print("-1")

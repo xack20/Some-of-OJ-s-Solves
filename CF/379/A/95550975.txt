@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    cin >> a >> b;
+    int s=a;
+    for(;;){
+        if(a<b)break;
+        c=a%b;
+        a=(int)a/b;
+        s=s+a;
+        a=a+c;
+    }
+    cout << s <<endl;
+    return 0;
+}
+

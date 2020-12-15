@@ -1,0 +1,30 @@
+import java.util.*
+
+fun main(){
+
+    val scan = Scanner(System.`in`)
+    var a : Int = scan.nextInt()
+    var b : Int = scan.nextInt()
+    var c : Int = scan.nextInt()
+
+    if(b>=c){
+        b=c-1
+        if(a>=b){
+            a=b-1
+            println(a+b+c)
+        }
+        else{
+            print(3*a+3)
+        }
+    }
+    else{
+        c=b+1
+        if(a>=b){
+            a=b-1
+            println(a+b+c)
+        }
+        else{
+            print(3*a+3)
+        }
+    }
+}

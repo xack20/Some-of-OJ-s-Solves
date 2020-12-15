@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1)
+   // {
+
+        long long n, a, b,t,t1,c=0;
+        cin >> n >> a >> b;
+        if(n%a==0)
+        {
+            cout << "YES" << endl;
+            cout << n/a << " " << "0" <<endl;
+        }
+        else if(n%b==0)
+        {
+            cout << "YES" << endl;
+            cout << "0" << " " << n/b <<endl;
+        }
+        else
+        {
+            t=n;
+            while(1)
+            {
+                t-=a;
+                if(t<0)break;
+                c++;
+                if(t%b==0)
+                {
+                    cout << "YES" <<endl;
+                    cout << c << " " << t/b <<endl;
+                    break;
+                }
+            }
+            c=0;
+            t1 = n;
+            if(t<0)
+            {
+                while(1)
+                {
+                    t1-=b;
+                    if(t1<0)break;
+                    c++;
+                    if(t1%a==0)
+                    {
+                        cout << "YES" <<endl;
+                        cout << t1/a << " " << c <<endl;
+                        break;
+                    }
+                }
+            }
+            if(t1<0)cout << "NO" <<endl;
+        }
+    //}
+    return 0;
+}

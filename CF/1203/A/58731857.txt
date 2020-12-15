@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    // freopen("a.in", "r", stdin);
+
+    long long q;
+    cin >> q;
+
+    while (q--) {
+        int n;
+        cin >> n;
+        vector<int> v(n);
+        int f;
+        for (int i = 0; i < n; i++) {
+            cin >> v[i];
+            if (v[i] == 1)
+                f = i;
+        }
+
+        bool found1 = true;
+        for (int i = 0; i < n; i++) {
+            int index = (f + i) % n;
+            if (v[index] != (i + 1)) {
+                found1 = false;
+                break;
+            }
+        }
+
+        bool found2 = true;
+        for (int i = 0; i < n; i++) {
+            int index = (f - i + n) % n;
+            if (v[index] != (i + 1)) {
+                found2 = false;
+                break;
+            }
+        }
+
+        if (found1 || found2) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+}

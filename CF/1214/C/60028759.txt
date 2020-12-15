@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n ; cin >> n ;
+
+    string s ; cin >> s;
+
+    int f = 0 , c  = 0;
+
+    for(int i = 0 ; s[i] ; i++)
+    {
+        if( s[i] == ')' ) c--;
+        else c++;
+        
+        if(c < -1)f=1;
+    }
+    if(c || f)cout << "No" <<endl;
+    else cout << "Yes" <<endl;
+
+    return 0;
+}

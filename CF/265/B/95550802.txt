@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    int prev,i,a,p,s=0;
+    cin >> a;
+    for(i=0;i<a;i++)
+    {
+        cin >> p;
+        if(i==0){
+            prev=p;
+            s+=p;
+            s++;
+            continue;
+        }
+
+        if(p==prev)s+=2;
+        else if((prev-p)>0){
+            s+=(prev-p);
+            s+=2;
+        }
+        else if((prev-p)<0){
+            s+=(p-prev);
+            s+=2;
+        }
+        prev=p;
+    }
+    cout << s <<endl;
+    //}
+    return 0;
+}

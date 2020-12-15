@@ -1,0 +1,8 @@
+n = input()
+s = len(n)
+n+="p"
+for i in range(s):
+    if(n[i] not in "aeioun" and n[i+1] not in "aeiou"):
+        print("NO")
+        exit()
+print("YES")

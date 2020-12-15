@@ -1,0 +1,8 @@
+n,m=map(int,input().split())
+c=0
+ls= sorted(list(map(int,input().split())))
+#print(ls)
+for i in ls:
+    if i >= m: break
+    c+=1
+print(abs(m-c)+(1 if m in ls else 0))

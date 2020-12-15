@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    long long a,d;
+    cin >> a;
+    long long A[a], B[a];
+    long long i;
+    for(i=0;i<a;i++)cin >> A[i];
+    for(i=0;i<a;i++)cin >> B[i];
+    long long sum =0;
+    sort(B,B+a);
+    for(i=0;i<a;i++)sum+=A[i];
+
+    d = sum-B[a-1];
+
+    if(sum<=B[a-1])
+    {
+        cout << "YES" <<endl;
+        return 0;
+    }
+    if(d<=B[a-2])cout << "YES" <<endl;
+    else cout << "NO" <<endl;
+    //}
+    return 0;
+
+}

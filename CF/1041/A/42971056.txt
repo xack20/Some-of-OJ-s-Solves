@@ -1,0 +1,7 @@
+n = int(input())
+ls = sorted(list(map(int,input().split())))
+if(n==1):print(0)
+else:
+    c=0
+    for i in range(n-1):c+=((ls[i+1]-ls[i])-1)
+    print(c)

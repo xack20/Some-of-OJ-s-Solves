@@ -1,0 +1,4 @@
+t=int(input())
+while t:
+    print(sum(list(map(int,input().split()))))
+    t-=1

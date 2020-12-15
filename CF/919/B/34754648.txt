@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int p, A[100002],i,k=0,n,sum;
+    for(i=1;;i++)
+    {
+        sum=0;
+        p=i;
+        while(p)
+        {
+            sum+=(p%10);
+            p/=10;
+        }
+        if(sum==10)A[k++]=i;
+        if(k>10005)break;
+        //cout << sum << endl;
+     }
+    cin >> n;
+    cout << A[n-1] <<endl;
+    //main();
+    return 0;
+}

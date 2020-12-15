@@ -1,0 +1,10 @@
+n = int(input())
+s = input()
+if(n==1):
+    print("Yes")
+    exit()
+for i in s:
+    if s.count(i)>=2:
+        print("Yes")
+        exit()
+print("No")

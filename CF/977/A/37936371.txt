@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fr freopen("input.txt","r",stdin);
+#define fw freopen("output.txt","w",stdout);
+#define sct scanf("%lld",&t);
+#define sc3(a,b,c) scanf("%lld %lld %lld",&a,&b,&c);
+#define sc2(a,b) scanf("%lld %lld",&a,&b);
+#define scn scanf("%lld",&n);
+#define pf printf
+#define sc scanf
+
+int main()
+{
+    //fr;
+    //fw;
+
+    long long int t , a , b , c , n,r;
+
+    sc2(a,b);
+
+    while(b)
+    {
+        r = a%10;
+        if(!r){a/=10;b--;continue;}
+        if(r<b){
+            a-=r;
+            b-=r;
+        }
+        else{
+            a-=b;
+            break;
+        }
+    }
+    cout << a <<endl;
+
+
+
+    //main();
+    return 0;
+}

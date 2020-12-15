@@ -1,0 +1,22 @@
+n,m = map(int,input().split())
+ls=[]
+fls=[0]*m
+#print(fls)
+for i in range(n):
+    ls.append(list(map(int,input().split())))
+
+for i in range(n):
+    ind= ls[i][0]
+    for j in range((ls[i][1]-ls[i][0])+1):
+        fls[ind-1]=-1
+        ind+=1
+print(fls.count(0))
+#print(fls)
+for i in range(m):
+    if(not fls[i]):
+        print(i+1,end=" ")
+    
+    
+    
+    
+    

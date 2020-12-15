@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[1000];
+    char stp[1000];
+    scanf("%s%s",str,stp);
+    strrev(stp);
+    //printf("%s %s",str,stp);
+    if(strcmp(str,stp)==0)printf("YES\n");
+    else printf("NO\n");
+    return 0;
+}

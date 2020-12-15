@@ -1,0 +1,44 @@
+n , m = map(int,input().split())
+
+A = [input() for i in range(n)]
+
+f=0
+
+'''for i in A:
+    print(i)'''
+
+
+
+def check(i,j ,n1,t):
+    if t :
+        c =0
+        for ii, jj in [[0, 1], [1, 0], [1, 1], [-1, -1], [-1, 0], [0, -1], [-1, 1], [1, -1]]:
+            if 0<=i+ii<n and 0<=j+jj<m and A[i+ii][j+jj]=='*': c+=1
+        if c == int(n1): return False
+        return True
+    else :
+        for ii, jj in [[0, 1], [1, 0], [1, 1], [-1, -1], [-1, 0], [0, -1], [-1, 1], [1, -1]]:
+            if 0<=i+ii<n and 0<=j+jj<m and A[i+ii][j+jj]=='*':
+                return True
+        return False
+        
+
+for i in range(n):
+    for j in range(m):
+        if A[i][j] >= '0' and A[i][j]<= '9':
+            if check(i,j,A[i][j],True):
+                f=1
+                #print(1)
+                break
+        elif A[i][j]=='.':
+           if check(i,j,A[i][j],False):
+               #print(2)
+               f=1
+               break
+    if f : break
+
+
+
+
+if(f) : print("NO")
+else : print("YES")

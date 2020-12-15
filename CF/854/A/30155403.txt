@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,d=0,j;
+    cin >> a;
+    int i;
+    int c;
+    if(a%2==0)c=(int)a/2-1;
+    else c=(int)a/2;
+    for(i=c;i>0;i--){
+        b = a - i;
+        d=0;
+        for(j=2;j<=i;j++){
+            if(i%j==0 && b%j==0)d++;
+        }
+        if(d==0)break;
+    }
+    if(i==0)i++;
+    printf("%d %d\n",i,b);
+    return 0;
+}

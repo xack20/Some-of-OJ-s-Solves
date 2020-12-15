@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    char A[100],B[100];
+    cin >> A >> B;
+    int i,j=0;
+    for(i=0;i<strlen(B);i++)
+    {
+        if(A[j]==B[i])j++;
+    }
+    if(j==strlen(A))cout << strlen(A) <<endl;
+    else cout << j+1 <<endl;
+    //}
+    return 0;
+}

@@ -1,0 +1,6 @@
+n = int(input())
+lst = list(map(int,input().split()))
+st = set()
+for i in range(n):
+    if(lst[i]):st.add(lst[i])
+print(len(st))

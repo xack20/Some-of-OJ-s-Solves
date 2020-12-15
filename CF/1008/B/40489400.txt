@@ -1,0 +1,19 @@
+# B
+
+n = int(input())
+ls=[]
+for i in range(n):
+    ls.append(list(map(int,input().split())))
+ls = list(reversed(ls))
+#print(ls)
+for i in range(n):
+    if ( not i and ls[0][0] < ls[0][1] ) : ls[0][0],ls[0][1] = ls[0][1] , ls[0][0]
+    elif not i : continue
+    elif ls[i-1][1]<= min(ls[i][0],ls[i][1]):
+        if ls[i][0] < ls[i][1]  : ls[i][0],ls[i][1] = ls[i][1] , ls[i][0]
+    elif ls[i-1][1]<= max(ls[i][0],ls[i][1]):
+        if ls[i][0] > ls[i][1]: ls[i][0], ls[i][1] = ls[i][1], ls[i][0]
+    else:
+        print("NO")
+        exit()
+print("YES")

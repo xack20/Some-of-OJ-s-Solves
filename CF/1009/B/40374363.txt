@@ -1,0 +1,34 @@
+s = input()
+ln = len(s)
+o = s.count('1')
+t=z=b=c=0
+for i in range(ln):
+    if(s[i]=='0' or s[i]=='2' ):
+        if(s[i]=='0'):
+            z=1;
+            c+=1
+        elif (s[i]=='2'):
+            if(z and c and not b):
+                for j in range(c):
+                    print(0,end="")
+                for j in range(o):
+                    print(1,end="")
+                print(2,end="")
+                b=1
+                o=0
+                c=0
+            elif(not b):
+                for j in range(o):
+                    print(1,end="")
+                print(2,end="")
+                b=1
+                o=0
+            else:
+                for j in range(c):
+                    print(0,end="")
+                print(2,end="")
+                c=0
+for i in range(c):
+    print(0,end="")
+for i in range(o):
+    print(1,end="")

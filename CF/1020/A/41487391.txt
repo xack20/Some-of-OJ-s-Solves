@@ -1,0 +1,23 @@
+t,f,lw,hw,q = map(int,input().split())
+while(q):
+  t1,f1,t2,f2=map(int,input().split())
+  if(t1==t2):
+    print(abs(f1-f2))
+  else:
+    ans=abs(t1-t2)
+    if((f1>=lw and f1<=hw) or (f2>=lw and f2<=hw)):
+      ans+=abs(f1-f2)
+      print(ans)
+    elif(f1<lw and f2 <lw) :
+      ans+=(abs(lw-f1)+abs(lw-f2))
+      print(ans)
+    elif(f1>hw and f2>hw) :
+      ans+=(abs(hw-f1)+abs(hw-f2))
+      print(ans)
+    else:
+      if(f1>hw):
+        ans+=(abs(hw-f1)+abs(hw-f2))
+      else:
+        ans+=(abs(lw-f1)+abs(lw-f2))
+      print(ans)
+  q-=1

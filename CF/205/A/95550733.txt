@@ -1,0 +1,7 @@
+n = input()
+
+m = list(map(int,input().split()))
+
+mn = min(m)
+if(m.count(mn)==1):print(m.index(mn)+1)
+else : print("Still Rozdil")

@@ -1,0 +1,9 @@
+n, h = map(int, input().split())
+ls = list(map(int, input().split()))
+ans = 0
+for a in ls:
+    if a > h:
+        ans += 2
+    else:
+        ans += 1
+print(ans)

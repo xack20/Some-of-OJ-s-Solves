@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fr freopen("input.txt","r",stdin);
+#define fw freopen("output.txt","w",stdout);
+#define sct scanf("%lld",&t);
+#define sc3(a,b,c) scanf("%lld %lld %lld",&a,&b,&c);
+#define sc2(a,b) scanf("%lld %lld",&a,&b);
+#define scn scanf("%lld",&n);
+#define pf printf
+#define sc scanf
+
+int main()
+{
+    //fr;
+    //fw;
+
+    long long int t, a, b, c, n, f =1, i, j;
+    scn;
+
+    //vector<string>v;
+    string S;
+    set<string>s;
+    //set<int>s1;
+    while(n--)
+    {
+        cin >> S;
+        sort(S.begin(),S.end());
+        for(i=1;i<S.size();i++)
+        {
+            if(S[i]==S[i-1]){
+                S.erase(S.begin()+i);
+                S.shrink_to_fit();
+                i--;
+                continue;
+            }
+        }
+        s.insert(S);
+    }
+
+
+    cout << s.size() <<endl;
+    //main();
+    return 0;
+}
+

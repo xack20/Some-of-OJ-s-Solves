@@ -1,0 +1,1 @@
+exec(input()*'n=input();print( "1"*(n//2) if not (n&1) else "7"+("1"*((n//2)-1)));')

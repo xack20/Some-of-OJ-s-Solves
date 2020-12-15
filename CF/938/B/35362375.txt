@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    long long n;
+    cin >> n;
+    long long A[n];
+    int i;
+    for(i=0; i<n; i++)
+        cin >> A[i];
+
+    sort(A,A+n);
+    if(A[n-1]<=500000)
+        cout << A[n-1]-1 <<endl;
+    else if(A[0]>500000)
+        cout << 1000000-A[0] <<endl;
+    else
+    {
+        for(i=0; i<n; i++)
+        {
+            if(A[i]==500000)
+            {
+                cout << "499999" <<endl;
+                break;
+            }
+            else if(A[i]>500000)
+            {
+                cout<<max(1000000-A[i],A[i-1]-1)<<endl;
+                break;
+            }
+        }
+    }
+
+
+
+    //main();
+    return 0;
+}

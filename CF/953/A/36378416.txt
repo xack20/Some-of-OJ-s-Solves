@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    set<long long>s;
+    vector<long long>a,b;
+    long long n = 1;
+    int i = 0;
+    while(n <= 2000000000)
+    {
+        n = pow(2,i);
+        //cout << n << endl;
+        s.insert(n);
+        i++;
+        a.push_back(n);
+    }
+     n = 1;
+     i = 0;
+    while(n <= 2000000000)
+    {
+        n = pow(3,i);
+        i++;
+        s.insert(n);
+        b.push_back(n);
+    }
+
+    for(int i = 0; i < a.size();i++)
+    {
+        for(int j = 0; j < b.size(); j++)
+        {
+            s.insert(a[i]*b[j]);
+        }
+    }
+    long l,r;
+    cin >> l >> r;
+    auto p1 = lower_bound(s.begin(),s.end(),l);
+    auto p2 = upper_bound(s.begin(),s.end(),r);
+    cout << distance(p1,p2) << endl;
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    long long a,b,t,c;
+    scanf("%lld",&t);
+    while(t--)
+    {
+        c=0;
+        scanf("%lld %lld",&a,&b);
+        while(1)
+        {
+            if(b>a){
+                c+=(b/a);
+                b%=a;
+            }
+            else{
+                c+=(a/b);
+                a%=b;
+            }
+            if(!a || !b)break;
+        }
+        printf("%lld\n",c);
+    }
+    //}
+    return 0;
+}

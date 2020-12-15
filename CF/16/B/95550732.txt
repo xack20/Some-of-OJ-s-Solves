@@ -1,0 +1,21 @@
+from operator import itemgetter
+
+n,m = map(int,input().split())
+lf = []
+for i in range(m):
+    ll = list(map(int,input().split()))
+    lf.append(ll)
+
+lf = sorted(lf, key=itemgetter(1), reverse=True)
+
+sum = 0
+
+for i in range(m):
+    if(lf[i][0]<=n):
+        n-=lf[i][0]
+        sum+=(lf[i][1]*lf[i][0])
+    else:
+        sum+=(lf[i][1]*n)
+        n=0
+    if(not n):break
+print(sum)

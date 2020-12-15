@@ -1,0 +1,25 @@
+def gcd(a,b):
+    if not b:
+        return a
+    return gcd(b,a%b)
+
+def tau(n):
+    i = 1
+    count = 0
+    while i*i <= n:
+        if n%i == 0:
+            j = n/i
+            count += 1
+            if i != j:
+                count += 1
+        i += 1
+    return count
+
+n    = int(input())
+nums = input().split()
+
+_gcd = int(nums[0])
+for num in nums:
+    _gcd = gcd(_gcd,int(num))
+
+print(tau(_gcd))

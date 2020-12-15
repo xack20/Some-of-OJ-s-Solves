@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,j;
+    cin >> n;
+
+    vector<int>v;
+    vector<int>v1;
+
+    for(i=0 ; i < n ; i ++)
+    {
+        int a ;
+        cin >> a;
+        v.push_back(a);
+        //A[a]=1;
+    }
+
+
+    //reverse(v.begin(),v.end());
+
+    for(i = 0 ; i < n ; i ++)
+    {
+        int f = 0 ;
+        for(j = i +1 ; j <n ; j ++)
+        {
+            if(v[i]==v[j])
+            {
+                f=1;
+                break;
+            }
+        }
+        if(!f){
+            //cout << v[i]  << " " ;
+            v1.push_back(v[i]);
+        }
+    }
+    cout << v1.size() <<endl;
+    for(i =0 ; i < v1.size()-1 ; i++)
+    {
+        cout << v1[i] << " ";
+    }
+    cout << v1[i] <<endl;
+
+
+    //main();
+    return 0;
+}

@@ -1,0 +1,22 @@
+import sys
+f=sys.stdin
+n = int(f.readline().rstrip('\r\n'))
+s1 = list(f.readline().rstrip('\r\n'))
+s2 = list(f.readline().rstrip('\r\n'))
+s1.append('0')
+s2.append('0')
+
+
+c=0
+for i in range(n):
+    if(s1[i]!=s2[i] and s1[i+1]!=s2[i+1] and s1[i]==s2[i+1] and s1[i+1]==s2[i]):
+        s1[i],s1[i+1]=s1[i+1],s1[i]
+        c+=1
+    elif (s1[i]!=s2[i]):
+        if(s2[i]=='0'):
+            s1[i]='0'
+        else:
+            s1[i]='1'
+        c+=1
+print(c)
+       

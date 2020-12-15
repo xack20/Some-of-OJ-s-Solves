@@ -1,0 +1,19 @@
+import java.util.*
+
+fun main(){
+    val scan = Scanner(System.`in`)
+
+    var n = scan.nextInt()
+    if(n==1){
+        println("Yes")
+    }
+    else {
+        var str = scan.next()
+        var st = mutableSetOf<Char>()
+        for (i in 0 until str.length) {
+            st.add(str[i])
+        }
+        if (st.size == str.length) println("No")
+        else println("Yes")
+    }
+}

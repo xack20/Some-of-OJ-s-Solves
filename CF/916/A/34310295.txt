@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,h,m,f=0,c=0;
+    cin >> a  >> h >> m;
+    while(1){
+        int dh=h;
+        while(dh){
+            if(dh%10==7){
+                f=1;
+                break;
+            }
+            dh/=10;
+        }
+        if(f)break;
+        int dm=m;
+    while(dm){
+            if(dm%10==7){
+                f=1;
+                break;
+            }
+            dm/=10;
+        }
+        if(f)break;
+        if(m-a>=0){
+            m-=a;
+        }
+        else {
+            m=60+(m-a);
+            if(h-1<0){
+                h=23;
+            }
+            else h--;
+        }
+        c++;
+    }
+    cout << c<<endl;
+    //main();
+    return 0;
+}

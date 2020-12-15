@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long b,i;
+    //while(1)
+    //{
+        cin >> b;
+    long long c;
+    if(b==1)printf("4\n");
+    else if(b==2)cout << "6"<<endl;
+    else if(b==3)cout <<"8"<<endl;
+    else {
+    c=(long long)sqrt(b);
+    int d =pow(c,2);
+    int f=4*c;
+    int e = b-d;
+    if(e==0)cout << f << endl;
+    else if(e>c)cout<< f+4<<endl;
+    else if(e<=c)cout << f+2<<endl;
+    }
+    //}
+    return 0;
+
+}

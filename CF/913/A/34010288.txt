@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,m;
+    long long ans;
+    cin >> n >> m;
+    ans = pow(2,n);
+    cout << m%ans <<endl;
+    //main();
+    return 0;
+}

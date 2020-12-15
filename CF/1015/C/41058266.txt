@@ -1,0 +1,26 @@
+n,m = map(int,input().split())
+ls = []
+s=0
+s1=0
+for i in range(n):
+    a,b=map(int,input().split())
+    s+=b
+    s1+=a
+    ls.append([a-b,a])
+ls=sorted(ls,reverse=True)
+#print(ls)
+
+if(s>m):
+    print(-1)
+    exit()
+
+d = s1-m
+c=0
+if(d<=0):
+    print(0)
+    exit()
+for i in range(n):
+    c+=1
+    d-=ls[i][0]
+    if(d<=0):break
+print(c)

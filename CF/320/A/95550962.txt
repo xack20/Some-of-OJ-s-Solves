@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1){
+    long long a;
+    cin >> a;
+    //int dig = ceil(log10(a));
+    vector<char>v;
+    while(a)
+    {
+        v.push_back('0'+(a%10));
+        a/=10;
+    }
+    reverse(v.begin(),v.end());
+    int s = v.size();
+    int i;
+    for(i=0;i<s;){
+        if(v[i]=='1' && v[i+1]=='4' && v[i+2]=='4')i+=3;
+        else if(v[i]=='1' && v[i+1]=='4')i+=2;
+        else if(v[i]=='1')i++;
+        else break;
+    }
+    if(i>=s)cout << "YES" << endl;
+    else cout << "NO" << endl;
+    //}
+    return 0;
+}

@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long a,b;
+    cin >> a;
+    long long t=0 , o=0;
+    while(a--)
+    {
+        cin >> b;
+        if(b==1)o++;
+        else t++;
+    }
+    if(!t){
+        cout << floor (o/3) <<endl;
+    }
+    else{
+        if(!o){
+            cout << "0" <<endl;
+
+        }
+        else{
+            long long ans;
+            if(t>=o){
+                cout << o <<endl;
+            }
+            else {
+                long long s=o-t;
+                t+=floor(s/3);
+                cout << t << endl;
+            }
+        }
+    }
+    //main();
+    return 0;
+}

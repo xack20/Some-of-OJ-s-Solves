@@ -1,0 +1,6 @@
+n = int(input())
+while(n):
+    a,b,c=map(int,input().split())
+    if(c*1<a):print(c*1)
+    else:print(((b//c)+1)*c)
+    n-=1

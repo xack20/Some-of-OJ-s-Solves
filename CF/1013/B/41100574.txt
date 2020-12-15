@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long n,x;
+    scanf("%lld %lld",&n,&x);
+    set<long long>st,st2;
+    long long A[n];
+    for(int i = 0 ; i < n ; i ++){
+            scanf("%lld",&A[i]);
+            st.insert(A[i]);
+    }
+    if(st.size()!=n){printf("0\n");return 0;}
+    map<long long,long long>mp1;
+    map<long long,long long>mp2;
+
+    for(int i = 0 ; i < n ; i ++)mp1[A[i]]=1;
+    for(int i = 0 ; i < n ; i ++){
+        if(mp1[A[i]&x] && A[i]!=(A[i]&x)){
+           printf("1\n");
+           return 0;
+        }
+        else{
+            st2.insert(A[i]&x);
+            mp2[A[i]&x]=1;
+        }
+    }
+    if(st2.size()!=n){
+        printf("2\n");
+        return 0;
+    }
+
+    printf("-1\n");
+    return 0;
+}

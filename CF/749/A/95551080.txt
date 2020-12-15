@@ -1,0 +1,7 @@
+n = int(input())
+o=0
+print(n//2)
+if(n%2):o=1
+for i in range(n//2):
+    if(i+1==(n//2)):print(2+o)
+    else: print(2,end=" ")

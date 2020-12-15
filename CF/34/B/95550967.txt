@@ -1,0 +1,6 @@
+n,m = map(int,input().split())
+ls = sorted(list(map(int,input().split())))
+sum=0
+for i in range(m):
+    if(ls[i]<0):sum+=ls[i]
+print(sum*-1)

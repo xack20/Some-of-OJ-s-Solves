@@ -1,0 +1,21 @@
+n,m = map(int,input().split())
+ls = list(map(int,input().split()))
+bls=list()
+od=0
+ev=0
+for i in range(n):
+    if(ls[i]%2):od+=1
+    else:ev+=1
+    if(ev==od):
+        if(i+1!=n):bls.append(abs(ls[i]-ls[i+1]))
+ln = len(bls)
+if ln==0:
+    print(0)
+else:
+    bls = sorted(bls)
+    c=0
+    for i in range(ln):
+        if(m-bls[i]<0):break
+        c+=1
+        m-=bls[i]
+    print(c)

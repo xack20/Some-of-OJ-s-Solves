@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int b,i;
+    cin >> b;
+    int A[b];
+    for(i=0;i<b;i++)cin >>A[i];
+    sort(A,A+b);
+    if(!(A[b-1]>=1 && A[b-1]<=25))cout << A[b-1]-25 <<endl;
+    else cout << "0" <<endl;
+    return 0;
+
+}

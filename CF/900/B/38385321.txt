@@ -1,0 +1,13 @@
+a,b,c = map(int,(input().split()))
+cc=1
+
+
+for i in range(100000):
+    cc+=1
+    a*=10
+    if(a//b==c):
+        print(cc-1)
+        exit()
+    a%=b
+
+print(-1)

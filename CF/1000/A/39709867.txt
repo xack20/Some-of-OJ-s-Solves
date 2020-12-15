@@ -1,0 +1,14 @@
+n = int(input())
+ls1 = list()
+ls2 = list()
+
+for i in range(n):ls1.append(input())
+for i in range(n):ls2.append(input())
+
+if(ls1==ls2):print(0)
+else:
+    c=0
+    for i in range(n):
+        if(ls2[i] not in ls1):c+=1
+        else: del ls1[ls1.index(ls2[i])]
+    print(c)

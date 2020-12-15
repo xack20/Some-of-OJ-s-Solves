@@ -1,0 +1,22 @@
+n,m = map(int,input().split())
+ls = []
+f=0
+c=0
+for i in range(n):
+    if f : continue
+    s= input()
+    l = list(s)
+    for j in range(m) :
+        if(l[j] is 'B'):
+            f=1
+            c+=1
+            q=j+1
+            p=i+1
+    ls.append(l)
+#print(c)
+if(c==1):print(p,q)
+else :
+    m = c//2
+    q = q-m
+    p = p+m
+    print(p,q)

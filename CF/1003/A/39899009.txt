@@ -1,0 +1,10 @@
+n = int(input())
+lst = list(map(int,input().split()))
+
+ls = list()
+for i in range(101):
+    ls.append(0)
+
+for i in range (n) :
+    ls[lst[i]]+=1
+print(max(ls))

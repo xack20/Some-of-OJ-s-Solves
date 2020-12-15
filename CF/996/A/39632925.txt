@@ -1,0 +1,9 @@
+lst = [100,20,10,5,1]
+c=i=0
+n = int(input())
+while(n):
+    if(n//lst[i]):
+        c+=(n//lst[i])
+        n%=lst[i]
+    i+=1
+print(c)

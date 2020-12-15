@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define fr freopen("input.txt","r",stdin);
+#define fw freopen("output.txt","w",stdout);
+#define sct scanf("%d",&t);
+#define sc3(a,b,c) scanf("%d %d %d",&a,&b,&c);
+#define sc2(a,b) scanf("%d %d",&a,&b);
+//#define for(a) for(i=0;i<a;i++)
+#define pf printf
+
+int main()
+{
+    //fr;
+    //fw;
+
+    long long n;
+    cin >> n;
+    if(n%2)cout << "Ehab" <<endl;
+    else cout << "Mahmoud" <<endl;
+
+
+    //main();
+    return 0;
+}
+

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class PhoneNumbers {
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        StringBuilder s = new StringBuilder(sc.next());
+        int len = s.length();
+        if(len==2 || len == 3){
+            System.out.println(s);
+            return;
+        }
+        if(len%2==0)
+        {
+            int k = 0;
+            for(int i = 0 ; i < (len/2)-1 ; i ++)
+            {
+                if(i==0)k+=2;
+                else k+=3;
+                s.insert(k,"-");
+
+            }
+        }
+        else{
+            int k = 0;
+            for(int i = 0 ; i < (len/2)-1 ; i ++)
+            {
+                k+=3;
+                s.insert(k,"-");
+
+            }
+        }
+        System.out.println(s);
+
+    }
+}

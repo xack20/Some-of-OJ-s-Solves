@@ -1,0 +1,5 @@
+t = int(input())
+while t:
+  n = int(input())
+  print( "1"*(n//2) if not (n&1) else "7"+("1"*((n//2)-1)))
+  t-=1

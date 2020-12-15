@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a;
+    char b[232];
+    cin >> a;
+    gets(b);
+    while(a--)
+    {
+        string A;
+        getline(cin,A);
+        int l= A.size();
+        if(A[0]=='m' && A[1]=='i' && A[2]=='a' && A[3]=='o' && A[4]=='.' && A[l-1]=='.' && A[l-2]=='a' && A[l-3]=='l' && A[l-4]=='a' && A[l-5]=='l')cout << "OMG>.< I don't know!" <<endl;
+        else if(A[0]=='m' && A[1]=='i' && A[2]=='a' && A[3]=='o' && A[4]=='.' )cout << "Rainbow's" <<endl;
+        else if(A[l-1]=='.' && A[l-2]=='a' && A[l-3]=='l' && A[l-4]=='a'&&  A[l-5]=='l')cout << "Freda's" <<endl;
+        else cout << "OMG>.< I don't know!" <<endl;
+    }
+    return 0;
+
+}

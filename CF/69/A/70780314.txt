@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+  ll t,A=0,B=0,C=0; cin>> t;
+  while(t--){
+    ll a,b,c;
+    cin >> a >> b >> c;
+    A+=a;
+    B+=b;
+    C+=c;
+  }
+  if(!A && !B && ! C)cout << "YES"<< endl;
+  else cout<< "NO"<<endl;
+}

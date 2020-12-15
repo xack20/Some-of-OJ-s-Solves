@@ -1,0 +1,8 @@
+n, m = map(int,input().split())
+if((n+(n-1))<m or n<2 or m<3):
+    print(0)
+else:
+    r = m-(n+1)
+    if(r<0):r=0
+    print(((m-1)//2)-r)
+        

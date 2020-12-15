@@ -1,0 +1,29 @@
+import java.util.*
+
+fun main(){
+    val scan = Scanner(System.`in`)
+
+    val t = scan.nextInt()
+
+    for(i in 1..t) {
+
+        val str = scan.next()
+        val rvs = str.reversed()
+        if (rvs != str) {
+            println(str)
+        } else {
+            var f = 1
+            for (i in 0 until str.length - 1) {
+                if (str[i] != str[i + 1]) {
+                    println(str.substring(i+1,str.length)+str.substring(0,i+1))
+                    //println(str.substring(0,str.length/2)+str.substring(str.length/2,str.length).reversed())
+                    f = 0
+                    break
+                }
+            }
+            if (f == 1) {
+                println(-1)
+            }
+        }
+    }
+}

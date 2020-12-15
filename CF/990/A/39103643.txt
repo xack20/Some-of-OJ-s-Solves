@@ -1,0 +1,6 @@
+import math
+n , m , a, b = map(int,input().split())
+t1=n%m
+t2 = (m*math.ceil(n/m))-n
+if not (n%m): print(0)
+else : print(min(t1*b , t2*a))

@@ -1,0 +1,12 @@
+n = int(input())
+m = int(input())
+summ = 0
+maxx = 0
+for i in range(n):
+    a = int(input())
+    if(a>maxx):maxx=a
+    summ+=a
+ans = (summ+m)//n
+if((summ+m)%n):ans= ((summ+m)//n)+1 
+print(max(ans,maxx),maxx+m)
+    

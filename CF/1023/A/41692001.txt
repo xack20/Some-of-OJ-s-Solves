@@ -1,0 +1,19 @@
+n,m = map(int,input().split())
+s1 = input()
+s2 = input()
+s11 = s1[::-1]
+s22= s2[::-1]
+if(n-m>1):
+    print("NO")
+elif s1.find('*')==-1 :
+    if(s1==s2):
+        print("YES")
+    else:
+        print("NO")
+else:
+    ind = s1.index("*")
+    indd = s11.index("*")
+    #print(s1[:ind],s2[:ind] , s11[:indd],s22[:indd])
+    if(s1[:ind]==s2[:ind] and s11[:indd]==s22[:indd]):
+        print("YES")
+    else:print("NO")

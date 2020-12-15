@@ -1,0 +1,15 @@
+st = input()
+ns = str()+ str(int(st[0])-1)
+for i in range(len(st)-1):
+    ns+='9'
+pnt = int(ns)
+nint = int(st)-pnt
+ans = 0
+while(pnt):
+    ans+=(pnt%10)
+    pnt//=10
+while(nint):
+    ans+=(nint%10)
+    nint//=10
+
+print(ans)

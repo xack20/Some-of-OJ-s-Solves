@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //while(1)
+    //{
+        int a,b,i,l,r;
+        char c1,c2;
+        cin >> a >> b;
+        char A[a];
+        cin >> A ;
+        while(b--)
+        {
+            cin >> l >> r >> c1 >> c2;
+            for(i=l-1; i<=r-1; i++){
+                    if(!A[i])break;
+                    if(A[i]==c1)A[i]=c2;
+
+            }
+        }
+        cout << A <<endl;
+    //}
+    return 0;
+}

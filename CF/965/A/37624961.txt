@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long double k,n,s,p;
+    cin >> k >> n >> s >> p;
+    long long q = (ceil((ceil(n/s)*k)/p));
+    cout << q <<endl;
+    //printf("%lld\n",(ceil((ceil(n/s)*k)/p)));
+
+    //main();
+    return 0;
+}

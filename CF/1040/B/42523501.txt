@@ -1,0 +1,31 @@
+n,k = map(int,input().split())
+if(n%2 and (n-1)//2 <=k) or (not n%2 and n//2<=k):
+    print(1)
+    print((n+1)//2)
+    exit()
+else:
+    kl = k+1
+    kh = 2*k+1
+    if(not n%kh):
+        an = n//kh
+        print(an)
+        inn = k+1
+        for i in range(an):
+            print(inn,end=" ")
+            inn+=(2*k+1)
+    else:
+        an = n//kh
+        r = n - (kh*(an-1))
+        ans = an-1
+        if(r%2):
+            p1 = (r+1)//2
+            p2 = r//2
+        else:
+            p1=p2=r//2
+        print(ans+2)
+        print(1+abs(kl-p1),end=" ")
+        ark = p1+((kh+1)//2)
+        for i in range(ans):
+            print(ark,end=" ")
+            ark+=kh
+        print(n-abs(kl-p2),end=" ")
